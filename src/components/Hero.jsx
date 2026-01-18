@@ -132,33 +132,7 @@ const Hero = () => {
           animate={inView ? 'visible' : 'hidden'}
         >
           <Stack spacing={4} alignItems="center" textAlign="center">
-            <motion.div variants={itemVariants}>
-              <Box
-                sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 1,
-                  px: 2,
-                  py: 1,
-                  mb: 3,
-                  borderRadius: 3,
-                  background: 'rgba(255, 255, 255, 0.15)',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                }}
-              >
-                <CircleIcon 
-                  sx={{ 
-                    fontSize: 8, 
-                    color: '#46d160',
-                    animation: 'pulse 2s infinite',
-                  }} 
-                />
-                <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, fontSize: '0.95rem' }}>
-                  Currently working on: Backend
-                </Typography>
-              </Box>
-            </motion.div>
+           
 
             <motion.div variants={itemVariants}>
               <Typography
@@ -213,6 +187,34 @@ const Hero = () => {
                   {displayText}
                 </Box>
               </Typography>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <Box
+                sx={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  px: 2,
+                  py: 1,
+                  mb: 3,
+                  borderRadius: 3,
+                  background: 'rgba(255, 255, 255, 0.15)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                }}
+              >
+                <CircleIcon 
+                  sx={{ 
+                    fontSize: 8, 
+                    color: '#46d160',
+                    animation: 'pulse 2s infinite',
+                  }} 
+                />
+                <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, fontSize: '0.95rem' }}>
+                  Currently working on: Backend
+                </Typography>
+              </Box>
             </motion.div>
 
             <motion.div variants={itemVariants}>
