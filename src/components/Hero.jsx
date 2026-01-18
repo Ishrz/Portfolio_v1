@@ -153,7 +153,7 @@ const Hero = () => {
                   }} 
                 />
                 <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, fontSize: '0.95rem' }}>
-                  Currently working on: Portfolio v2.0
+                  Currently working on: backend
                 </Typography>
               </Box>
             </motion.div>
@@ -182,7 +182,7 @@ const Hero = () => {
                     display: 'inline-block',
                   }}
                 >
-                  [Your Name]
+                  Shaikh M.Ahamad
                 </Box>
               </Typography>
             </motion.div>

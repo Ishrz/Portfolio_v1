@@ -100,7 +100,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   mr: 4,
                 }}
               >
-                Portfolio
+                <i>Shaykh</i>
               </Box>
             </motion.div>
 

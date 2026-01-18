@@ -7,8 +7,8 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import BuildIcon from '@mui/icons-material/Build';
 
 const skills = {
-  frontend: ['React', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Material-UI'],
-  tools: ['Git', 'Vite', 'Webpack', 'Figma', 'VS Code', 'Chrome DevTools'],
+  frontend: ['React', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Material-UI','DaisyUI','Redux','Redux Toolkit'],
+  tools: ['Git', 'Vite', 'VS Code', 'Chrome DevTools','Cursor','Netlify','Vercel','Linux'],
   design: ['UI/UX Design', 'Responsive Design', 'Prototyping', 'Wireframing'],
 };
 

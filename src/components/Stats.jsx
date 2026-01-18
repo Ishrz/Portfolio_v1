@@ -8,10 +8,10 @@ import LocalCafeIcon from '@mui/icons-material/LocalCafe';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const stats = [
-  { label: 'Projects', value: '24+', icon: <CodeIcon sx={{ fontSize: 40 }} />, color: '#667eea' },
-  { label: 'Lines of Code', value: '50K+', icon: <TerminalIcon sx={{ fontSize: 40 }} />, color: '#764ba2' },
-  { label: 'Coffee Cups', value: '∞', icon: <LocalCafeIcon sx={{ fontSize: 40 }} />, color: '#f093fb' },
-  { label: 'Happy Clients', value: '18+', icon: <FavoriteIcon sx={{ fontSize: 40 }} />, color: '#ff6b6b' },
+  { label: 'Projects', value: '50+', icon: <CodeIcon sx={{ fontSize: 40 }} />, color: '#667eea' },
+  { label: 'Contributions', value: '441+', icon: <TerminalIcon sx={{ fontSize: 40 }} />, color: '#764ba2' },
+  // { label: 'Coffee Cups', value: '∞', icon: <LocalCafeIcon sx={{ fontSize: 40 }} />, color: '#f093fb' },
+  // { label: 'Happy Clients', value: '18+', icon: <FavoriteIcon sx={{ fontSize: 40 }} />, color: '#ff6b6b' },
 ];
 
 const Stats = () => {

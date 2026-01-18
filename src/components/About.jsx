@@ -180,7 +180,7 @@ const About = () => {
                       <Stack direction="row" spacing={1} alignItems="center">
                         <LocationOnIcon sx={{ color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a' }} />
                         <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                          [Your Location]
+                          Pune,Maharashtra,India
                         </Typography>
                       </Stack>
                     </Paper>
@@ -202,7 +202,7 @@ const About = () => {
                       <Stack direction="row" spacing={1} alignItems="center">
                         <EmailIcon sx={{ color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a' }} />
                         <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                          [your.email@example.com]
+                          ishrzz66@gmail.com
                         </Typography>
                       </Stack>
                     </Paper>
