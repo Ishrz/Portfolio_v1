@@ -78,6 +78,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           backdropFilter: scrolled ? 'blur(10px)' : 'none',
           boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.1)' : 'none',
           transition: 'all 0.3s ease',
+          marginBottom:'10px',
         }}
       >
         <Container maxWidth="lg">
