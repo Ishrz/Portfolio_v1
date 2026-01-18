@@ -80,7 +80,7 @@ const Hero = () => {
       id="home"
       sx={{
         // marginTop:'10px',
-        paddingTop:'40px',
+        paddingTop:'60px',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
