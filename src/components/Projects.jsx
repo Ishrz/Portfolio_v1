@@ -29,12 +29,12 @@ const projects = [
   },
   {
     id: 'project-3',
-    title: 'Weather Dashboard',
-    description: 'A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
-    technologies: ['React', 'OpenWeather API', 'Chart.js', 'Leaflet'],
+    title: 'ZetaVR',
+    description: 'Built ZetaVR, a responsive single-page marketing site using React and Vite that showcases product features, pricing, workflow, and testimonials. Implemented a modular component architecture with centralized content/constants and local media assets for interactive hero and demo sections. Styling and layout implemented with Tailwind CSS and custom fonts.',
+    technologies: [' JavaScript','tailwindcss','React','custom CSS',' lucide-react'],
     image: <ImageIcon sx={{ fontSize: 200, color: '#f093fb', opacity: 0.3 }} />,
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://zetavr.netlify.app/',
+    githubUrl: 'https://github.com/Ishrz/ZetaVR',
   },
 ];
 

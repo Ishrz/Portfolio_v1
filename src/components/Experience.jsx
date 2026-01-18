@@ -8,28 +8,29 @@ import SchoolIcon from '@mui/icons-material/School';
 const experiences = [
   {
     type: 'work',
-    title: 'Senior Frontend Developer',
-    company: 'Tech Company Inc.',
-    period: '2022 - Present',
+    title: 'HulkHire solution',
+    // company: 'Tech Company Inc.',
+    period: 'Intern Backend developer',
     description: 'Leading frontend development initiatives, mentoring junior developers, and architecting scalable React applications.',
     icon: <WorkIcon />,
   },
   {
-    type: 'work',
-    title: 'Frontend Developer',
-    company: 'Startup XYZ',
-    period: '2020 - 2022',
-    description: 'Developed and maintained multiple web applications using React, implemented responsive designs, and optimized performance.',
-    icon: <WorkIcon />,
+    type: 'education',
+    title: 'AIMS Pune, SPPU Pune',
+    company: 'CGPA: 9.04',
+    period: 'Master of Computer Application ',
+    // description: 'Graduated with honors, focused on web development and software engineering principles.',
+    icon: <SchoolIcon />,
   },
   {
     type: 'education',
-    title: 'Bachelor of Science in Computer Science',
-    company: 'University Name',
-    period: '2016 - 2020',
-    description: 'Graduated with honors, focused on web development and software engineering principles.',
+    title: 'M.J College Jalgaon,NMU university',
+    company: 'CGPA: 9.04',
+    period: 'Bachelor of Computer Application ',
+    // description: 'Graduated with honors, focused on web development and software engineering principles.',
     icon: <SchoolIcon />,
   },
+  
 ];
 
 const Experience = () => {
