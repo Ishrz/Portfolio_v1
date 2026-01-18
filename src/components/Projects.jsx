@@ -192,7 +192,7 @@ const Projects = () => {
                       >
                         <Stack spacing={2}>
                           <Stack direction="row" spacing={2} alignItems="center">
-                            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                            {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                               <IconButton
                                 onClick={() => handleUpvote(project.id)}
                                 sx={{
@@ -208,13 +208,13 @@ const Projects = () => {
                               >
                                 <ArrowUpwardIcon />
                               </IconButton>
-                            </motion.div>
-                            <Stack direction="row" spacing={1} alignItems="center">
+                            </motion.div> */}
+                            {/* <Stack direction="row" spacing={1} alignItems="center">
                               <VisibilityIcon sx={{ fontSize: 16, color: 'text.secondary' }} />
                               <Typography variant="body2" sx={{ color: 'text.secondary', fontWeight: 500 }}>
                                 {viewCount[project.id]} views
                               </Typography>
-                            </Stack>
+                            </Stack> */}
                           </Stack>
 
                           <Typography

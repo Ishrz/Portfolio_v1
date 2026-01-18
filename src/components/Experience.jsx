@@ -11,13 +11,13 @@ const experiences = [
     title: 'HulkHire solution',
     // company: 'Tech Company Inc.',
     period: 'Intern Backend developer',
-    description: 'Leading frontend development initiatives, mentoring junior developers, and architecting scalable React applications.',
+    description: 'Developed a highly secure and scalable e-commerce payment system, designed & developed Validation Framework and integrating Trustly for expanded payment options in the European market. ',
     icon: <WorkIcon />,
   },
   {
     type: 'education',
     title: 'AIMS Pune, SPPU Pune',
-    company: 'CGPA: 9.04',
+    company: 'CGPA: 8.55',
     period: 'Master of Computer Application ',
     // description: 'Graduated with honors, focused on web development and software engineering principles.',
     icon: <SchoolIcon />,
@@ -198,7 +198,7 @@ const Experience = () => {
                             {exp.icon}
                           </Box>
                           <Box>
-                            <Typography variant="body2" sx={{ fontWeight: 600, color: 'text.primary' }}>
+                            <Typography variant="body2"  sx={{ fontWeight: 600, color: 'text.primary',fontSize: '1.2rem' }}>
                               {exp.period}
                             </Typography>
                           </Box>
@@ -231,7 +231,7 @@ const Experience = () => {
                         >
                           <Stack spacing={1}>
                             <Typography
-                              variant="h5"
+                              variant="h6"
                               sx={{
                                 fontWeight: 700,
                                 color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a',

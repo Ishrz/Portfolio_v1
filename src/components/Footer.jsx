@@ -34,7 +34,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <Typography variant="body2">
-              © {currentYear} Portfolio. All rights reserved.
+              © {currentYear} Shaykh Portfolio. All rights reserved.
             </Typography>
           </motion.div>
           <motion.div
@@ -101,7 +101,7 @@ const Footer = () => {
         </Stack>
         <Box sx={{ mt: 3, textAlign: 'center' }}>
           <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.6)' }}>
-            Built with React, Material-UI, and Framer Motion
+           
           </Typography>
         </Box>
       </Container>

@@ -58,9 +58,9 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: <EmailIcon />, label: 'Email', url: 'mailto:your.email@example.com', color: '#667eea' },
-    { icon: <LinkedInIcon />, label: 'LinkedIn', url: 'https://linkedin.com', color: '#0077b5' },
-    { icon: <GitHubIcon />, label: 'GitHub', url: 'https://github.com', color: '#333' },
+    { icon: <EmailIcon />, label: 'Email', url: 'mailto:ishrzz66@gmail.com', color: '#667eea' },
+    { icon: <LinkedInIcon />, label: 'LinkedIn', url: 'https://www.linkedin.com/in/skmubashir', color: '#0077b5' },
+    { icon: <GitHubIcon />, label: 'GitHub', url: 'https://github.com/Ishrz', color: '#333' },
     { icon: <TwitterIcon />, label: 'Twitter', url: 'https://twitter.com', color: '#1da1f2' },
   ];
 
