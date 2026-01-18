@@ -87,10 +87,16 @@ const Hero = () => {
         position: 'relative',
         overflow: 'hidden',
         background: '#1a1a1a',
-        backgroundImage: `
-          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
-        `,
+        backgroundImage: {
+          xs: `
+            linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
+          `,
+          sm: `
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `,
+        },
         backgroundSize: '40px 40px',
         '&::before': {
           content: '""',

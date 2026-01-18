@@ -221,10 +221,22 @@ const Projects = () => {
                             variant="h4"
                             sx={{
                               fontWeight: 700,
-                              background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
-                              WebkitBackgroundClip: 'text',
-                              WebkitTextFillColor: 'transparent',
-                              backgroundClip: 'text',
+                              // Mobile: Always use solid, high-contrast color
+                              '@media (max-width: 600px)': {
+                                color: (theme) => theme.palette.mode === 'dark' ? '#ffffff !important' : '#1a1a1a !important',
+                                background: 'none !important',
+                                WebkitBackgroundClip: 'unset !important',
+                                WebkitTextFillColor: (theme) => theme.palette.mode === 'dark' ? '#ffffff !important' : '#1a1a1a !important',
+                                backgroundClip: 'unset !important',
+                              },
+                              // Desktop: Use gradient effect
+                              '@media (min-width: 600px)': {
+                                color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a', // Fallback
+                                background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                backgroundClip: 'text',
+                              },
                             }}
                           >
                             {project.title}
