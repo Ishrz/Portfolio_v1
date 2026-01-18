@@ -150,11 +150,23 @@ const Hero = () => {
                 <Box
                   component="span"
                   sx={{
-                    background: 'linear-gradient(90deg, #fff 0%, #f0f0f0 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    color:'white',
-                    backgroundClip: 'text',
+                    color: 'white', // Always white as fallback
+                    background: {
+                      xs: 'none', // No gradient on mobile - just white text
+                      sm: 'linear-gradient(90deg, #fff 0%, #f0f0f0 100%)', // Gradient only on larger screens
+                    },
+                    WebkitBackgroundClip: {
+                      xs: 'unset',
+                      sm: 'text',
+                    },
+                    WebkitTextFillColor: {
+                      xs: 'white', // White text on mobile
+                      sm: 'transparent', // Transparent for gradient on larger screens
+                    },
+                    backgroundClip: {
+                      xs: 'unset',
+                      sm: 'text',
+                    },
                     position: 'relative',
                     display: 'inline-block',
                   }}
