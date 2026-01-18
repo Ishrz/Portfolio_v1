@@ -79,6 +79,8 @@ const Hero = () => {
       component="section"
       id="home"
       sx={{
+        // marginTop:'10px',
+        paddingTop:'10px',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -153,7 +155,7 @@ const Hero = () => {
                   }} 
                 />
                 <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, fontSize: '0.95rem' }}>
-                  Currently working on: backend
+                  Currently working on: Backend
                 </Typography>
               </Box>
             </motion.div>
@@ -177,6 +179,7 @@ const Hero = () => {
                     background: 'linear-gradient(90deg, #fff 0%, #f0f0f0 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
+                    color:'white',
                     backgroundClip: 'text',
                     position: 'relative',
                     display: 'inline-block',

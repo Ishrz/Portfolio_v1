@@ -64,7 +64,7 @@ const Stats = () => {
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          <Grid container spacing={3}>
+          <Grid container spacing={3} justifyContent="center" alignItems="center">
             {stats.map((stat) => (
               <Grid item xs={6} md={3} key={stat.label}>
                 <motion.div variants={itemVariants} whileHover={{ scale: 1.05, y: -5 }}>
@@ -73,7 +73,11 @@ const Stats = () => {
                     sx={{
                       p: 3,
                       textAlign: 'center',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      display: 'flex',
                       cursor: 'pointer',
+                      flexDirection: 'column',
                       borderRadius: 3,
                       border: '1px solid',
                       borderColor: 'divider',
