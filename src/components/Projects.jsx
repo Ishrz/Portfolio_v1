@@ -87,7 +87,14 @@ const Projects = () => {
       id="projects"
       sx={{
         py: { xs: 8, md: 12 },
-        background: 'linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%)',
+        background: (theme) => theme.palette.mode === 'dark' ? '#1a1a1a' : '#ffffff',
+        backgroundImage: (theme) => theme.palette.mode === 'dark' 
+          ? `
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `
+          : 'none',
+        backgroundSize: '40px 40px',
         position: 'relative',
       }}
     >
@@ -106,10 +113,7 @@ const Projects = () => {
                   fontWeight: 700,
                   textAlign: 'center',
                   mb: 1,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a',
                 }}
               >
                 Featured Projects
@@ -118,7 +122,7 @@ const Projects = () => {
                 sx={{
                   width: 60,
                   height: 4,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                   mx: 'auto',
                   borderRadius: 2,
                 }}
@@ -157,7 +161,9 @@ const Projects = () => {
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)',
+                          background: (theme) => theme.palette.mode === 'dark' 
+                            ? 'rgba(255, 255, 255, 0.05)' 
+                            : 'rgba(0, 0, 0, 0.02)',
                           position: 'relative',
                           overflow: 'hidden',
                           minHeight: { xs: 200, md: 300 },
@@ -215,7 +221,7 @@ const Projects = () => {
                             variant="h4"
                             sx={{
                               fontWeight: 700,
-                              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                              background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                               WebkitBackgroundClip: 'text',
                               WebkitTextFillColor: 'transparent',
                               backgroundClip: 'text',
@@ -259,9 +265,10 @@ const Projects = () => {
                                   px: 3,
                                   textTransform: 'none',
                                   fontWeight: 600,
-                                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                  background: (theme) => theme.palette.mode === 'dark' ? 'white' : '#1a1a1a',
+                                  color: (theme) => theme.palette.mode === 'dark' ? '#1a1a1a' : 'white',
                                   '&:hover': {
-                                    background: 'linear-gradient(135deg, #5568d3 0%, #653a8f 100%)',
+                                    background: (theme) => theme.palette.mode === 'dark' ? '#f5f5f5' : '#2a2a2a',
                                   },
                                 }}
                               >
@@ -279,11 +286,11 @@ const Projects = () => {
                                   px: 3,
                                   textTransform: 'none',
                                   fontWeight: 600,
-                                  borderColor: 'primary.main',
-                                  color: 'primary.main',
+                                  borderColor: (theme) => theme.palette.mode === 'dark' ? 'white' : '#1a1a1a',
+                                  color: (theme) => theme.palette.mode === 'dark' ? 'white' : '#1a1a1a',
                                   '&:hover': {
-                                    borderColor: 'primary.dark',
-                                    background: 'rgba(102, 126, 234, 0.05)',
+                                    borderColor: (theme) => theme.palette.mode === 'dark' ? '#f5f5f5' : '#2a2a2a',
+                                    background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)',
                                   },
                                 }}
                               >

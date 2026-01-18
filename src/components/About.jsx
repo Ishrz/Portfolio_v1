@@ -41,7 +41,14 @@ const About = () => {
       id="about"
       sx={{
         py: { xs: 8, md: 12 },
-        background: 'linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%)',
+        background: (theme) => theme.palette.mode === 'dark' ? '#1a1a1a' : '#ffffff',
+        backgroundImage: (theme) => theme.palette.mode === 'dark' 
+          ? `
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `
+          : 'none',
+        backgroundSize: '40px 40px',
         position: 'relative',
       }}
     >
@@ -60,10 +67,7 @@ const About = () => {
                   fontWeight: 700,
                   textAlign: 'center',
                   mb: 1,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a',
                 }}
               >
                 About Me
@@ -72,7 +76,7 @@ const About = () => {
                 sx={{
                   width: 60,
                   height: 4,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                   mx: 'auto',
                   borderRadius: 2,
                 }}
@@ -107,7 +111,7 @@ const About = () => {
                         width: { xs: 200, md: 280 },
                         height: { xs: 200, md: 280 },
                         border: '8px solid',
-                        borderColor: 'primary.main',
+                        borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                         boxShadow: '0 20px 60px rgba(102, 126, 234, 0.3)',
                       }}
                     >
@@ -122,7 +126,7 @@ const About = () => {
                       width: 60,
                       height: 60,
                       borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                       opacity: 0.2,
                       zIndex: -1,
                     }}
@@ -163,14 +167,18 @@ const About = () => {
                       sx={{
                         p: 2,
                         borderRadius: 3,
-                        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
+                        background: (theme) => theme.palette.mode === 'dark' 
+                          ? 'rgba(255, 255, 255, 0.05)' 
+                          : 'rgba(0, 0, 0, 0.02)',
                         border: '1px solid',
-                        borderColor: 'rgba(102, 126, 234, 0.2)',
+                        borderColor: (theme) => theme.palette.mode === 'dark' 
+                          ? 'rgba(255, 255, 255, 0.1)' 
+                          : 'rgba(0, 0, 0, 0.1)',
                         flex: 1,
                       }}
                     >
                       <Stack direction="row" spacing={1} alignItems="center">
-                        <LocationOnIcon sx={{ color: 'primary.main' }} />
+                        <LocationOnIcon sx={{ color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a' }} />
                         <Typography variant="body2" sx={{ fontWeight: 500 }}>
                           [Your Location]
                         </Typography>
@@ -181,14 +189,18 @@ const About = () => {
                       sx={{
                         p: 2,
                         borderRadius: 3,
-                        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
+                        background: (theme) => theme.palette.mode === 'dark' 
+                          ? 'rgba(255, 255, 255, 0.05)' 
+                          : 'rgba(0, 0, 0, 0.02)',
                         border: '1px solid',
-                        borderColor: 'rgba(102, 126, 234, 0.2)',
+                        borderColor: (theme) => theme.palette.mode === 'dark' 
+                          ? 'rgba(255, 255, 255, 0.1)' 
+                          : 'rgba(0, 0, 0, 0.1)',
                         flex: 1,
                       }}
                     >
                       <Stack direction="row" spacing={1} alignItems="center">
-                        <EmailIcon sx={{ color: 'primary.main' }} />
+                        <EmailIcon sx={{ color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a' }} />
                         <Typography variant="body2" sx={{ fontWeight: 500 }}>
                           [your.email@example.com]
                         </Typography>

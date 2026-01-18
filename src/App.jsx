@@ -17,22 +17,22 @@ function App() {
     palette: {
       mode: darkMode ? 'dark' : 'light',
       primary: {
-        main: darkMode ? '#818cf8' : '#667eea',
-        light: darkMode ? '#a5b4fc' : '#818cf8',
-        dark: darkMode ? '#6366f1' : '#4c63d2',
+        main: '#ffffff',
+        light: '#f5f5f5',
+        dark: '#e0e0e0',
       },
       secondary: {
-        main: darkMode ? '#a78bfa' : '#764ba2',
-        light: darkMode ? '#c4b5fd' : '#9f7aea',
-        dark: darkMode ? '#8b5cf6' : '#553c9a',
+        main: '#9e9e9e',
+        light: '#bdbdbd',
+        dark: '#757575',
       },
       background: {
-        default: darkMode ? '#0f172a' : '#ffffff',
-        paper: darkMode ? '#1e293b' : '#f8f9fa',
+        default: darkMode ? '#1a1a1a' : '#ffffff',
+        paper: darkMode ? '#2a2a2a' : '#f8f9fa',
       },
       text: {
-        primary: darkMode ? '#f1f5f9' : '#1a202c',
-        secondary: darkMode ? '#cbd5e1' : '#4a5568',
+        primary: darkMode ? '#ffffff' : '#1a1a1a',
+        secondary: darkMode ? '#b0b0b0' : '#4a5568',
       },
     },
     typography: {

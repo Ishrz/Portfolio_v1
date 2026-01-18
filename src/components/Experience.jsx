@@ -67,7 +67,14 @@ const Experience = () => {
       id="experience"
       sx={{
         py: { xs: 8, md: 12 },
-        background: '#ffffff',
+        background: (theme) => theme.palette.mode === 'dark' ? '#1a1a1a' : '#ffffff',
+        backgroundImage: (theme) => theme.palette.mode === 'dark' 
+          ? `
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `
+          : 'none',
+        backgroundSize: '40px 40px',
         position: 'relative',
       }}
     >
@@ -86,10 +93,7 @@ const Experience = () => {
                   fontWeight: 700,
                   textAlign: 'center',
                   mb: 1,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a',
                 }}
               >
                 Experience & Education
@@ -98,7 +102,7 @@ const Experience = () => {
                 sx={{
                   width: 60,
                   height: 4,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                   mx: 'auto',
                   borderRadius: 2,
                 }}
@@ -116,7 +120,7 @@ const Experience = () => {
                   top: 0,
                   bottom: 0,
                   width: 2,
-                  background: 'linear-gradient(180deg, #667eea 0%, #764ba2 100%)',
+                  background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                 },
               }}
             >
@@ -139,9 +143,9 @@ const Experience = () => {
                         width: 16,
                         height: 16,
                         borderRadius: '50%',
-                        background: exp.type === 'work'
-                          ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-                          : 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                        background: (theme) => theme.palette.mode === 'dark' 
+                          ? 'rgba(255, 255, 255, 0.2)' 
+                          : '#1a1a1a',
                         border: '3px solid',
                         borderColor: 'background.default',
                         zIndex: 1,
@@ -164,11 +168,13 @@ const Experience = () => {
                           sx={{
                             p: 2,
                             borderRadius: 3,
-                            background: exp.type === 'work'
-                              ? 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)'
-                              : 'linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 101, 101, 0.1) 100%)',
+                            background: (theme) => theme.palette.mode === 'dark' 
+                              ? 'rgba(255, 255, 255, 0.05)' 
+                              : 'rgba(0, 0, 0, 0.02)',
                             border: '1px solid',
-                            borderColor: exp.type === 'work' ? 'rgba(102, 126, 234, 0.2)' : 'rgba(240, 147, 251, 0.2)',
+                            borderColor: (theme) => theme.palette.mode === 'dark' 
+                              ? 'rgba(255, 255, 255, 0.1)' 
+                              : 'rgba(0, 0, 0, 0.1)',
                             display: 'flex',
                             alignItems: 'center',
                             gap: 2,
@@ -179,10 +185,10 @@ const Experience = () => {
                             sx={{
                               p: 1.5,
                               borderRadius: 2,
-                              background: exp.type === 'work'
-                                ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-                                : 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-                              color: 'white',
+                              background: (theme) => theme.palette.mode === 'dark' 
+                                ? 'rgba(255, 255, 255, 0.2)' 
+                                : '#1a1a1a',
+                              color: (theme) => theme.palette.mode === 'dark' ? '#1a1a1a' : 'white',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
@@ -203,14 +209,22 @@ const Experience = () => {
                           sx={{
                             p: 3,
                             borderRadius: 3,
-                            background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%)',
+                            background: (theme) => theme.palette.mode === 'dark' 
+                              ? 'rgba(255, 255, 255, 0.02)' 
+                              : 'rgba(0, 0, 0, 0.01)',
                             border: '1px solid',
-                            borderColor: 'rgba(102, 126, 234, 0.1)',
+                            borderColor: (theme) => theme.palette.mode === 'dark' 
+                              ? 'rgba(255, 255, 255, 0.1)' 
+                              : 'rgba(0, 0, 0, 0.1)',
                             transition: 'all 0.3s ease',
                             '&:hover': {
                               transform: 'translateX(8px)',
-                              borderColor: 'rgba(102, 126, 234, 0.3)',
-                              boxShadow: '0 10px 30px rgba(102, 126, 234, 0.1)',
+                              borderColor: (theme) => theme.palette.mode === 'dark' 
+                                ? 'rgba(255, 255, 255, 0.2)' 
+                                : 'rgba(0, 0, 0, 0.2)',
+                              boxShadow: (theme) => theme.palette.mode === 'dark' 
+                                ? '0 10px 30px rgba(255, 255, 255, 0.1)' 
+                                : '0 10px 30px rgba(0, 0, 0, 0.1)',
                             },
                           }}
                         >
@@ -219,10 +233,7 @@ const Experience = () => {
                               variant="h5"
                               sx={{
                                 fontWeight: 700,
-                                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                                backgroundClip: 'text',
+                                color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a',
                               }}
                             >
                               {exp.title}

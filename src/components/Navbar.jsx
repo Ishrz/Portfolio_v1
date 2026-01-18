@@ -73,7 +73,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         position="fixed"
         sx={{
           backgroundColor: scrolled 
-            ? (darkMode ? 'rgba(15, 23, 42, 0.95)' : 'rgba(255, 255, 255, 0.95)')
+            ? (darkMode ? 'rgba(26, 26, 26, 0.95)' : 'rgba(255, 255, 255, 0.95)')
             : 'transparent',
           backdropFilter: scrolled ? 'blur(10px)' : 'none',
           boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.1)' : 'none',
@@ -93,10 +93,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 sx={{
                   fontSize: '1.5rem',
                   fontWeight: 800,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: scrolled 
+                    ? (darkMode ? '#ffffff' : '#1a1a1a')
+                    : 'white',
                   cursor: 'pointer',
                   mr: 4,
                 }}
@@ -118,8 +117,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     sx={{
                       color: scrolled 
                         ? (darkMode 
-                          ? (activeSection === item.id ? '#818cf8' : '#cbd5e1')
-                          : (activeSection === item.id ? '#667eea' : '#4a5568'))
+                          ? (activeSection === item.id ? '#ffffff' : '#b0b0b0')
+                          : (activeSection === item.id ? '#1a1a1a' : '#4a5568'))
                         : 'white',
                       fontWeight: activeSection === item.id ? 600 : 400,
                       textTransform: 'none',
@@ -133,12 +132,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         transform: activeSection === item.id ? 'translateX(-50%) scaleX(1)' : 'translateX(-50%) scaleX(0)',
                         width: '60%',
                         height: '2px',
-                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        background: scrolled 
+                          ? (darkMode ? '#ffffff' : '#1a1a1a')
+                          : 'white',
                         transition: 'transform 0.3s ease',
                       },
                       '&:hover': {
                         color: scrolled 
-                          ? (darkMode ? '#818cf8' : '#667eea')
+                          ? (darkMode ? '#ffffff' : '#1a1a1a')
                           : 'rgba(255,255,255,0.9)',
                       },
                     }}
@@ -154,7 +155,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 onClick={() => setDarkMode(!darkMode)}
                 sx={{
                   color: scrolled 
-                    ? (darkMode ? '#fbbf24' : '#1a202c')
+                    ? (darkMode ? '#ffffff' : '#1a1a1a')
                     : 'white',
                 }}
               >

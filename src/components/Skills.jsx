@@ -68,7 +68,14 @@ const Skills = () => {
       id="skills"
       sx={{
         py: { xs: 8, md: 12 },
-        background: '#ffffff',
+        background: (theme) => theme.palette.mode === 'dark' ? '#1a1a1a' : '#ffffff',
+        backgroundImage: (theme) => theme.palette.mode === 'dark' 
+          ? `
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `
+          : 'none',
+        backgroundSize: '40px 40px',
         position: 'relative',
       }}
     >
@@ -87,10 +94,7 @@ const Skills = () => {
                   fontWeight: 700,
                   textAlign: 'center',
                   mb: 1,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: (theme) => theme.palette.mode === 'dark' ? '#ffffff' : '#1a1a1a',
                 }}
               >
                 Skills & Technologies
@@ -99,7 +103,7 @@ const Skills = () => {
                 sx={{
                   width: 60,
                   height: 4,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : '#1a1a1a',
                   mx: 'auto',
                   borderRadius: 2,
                 }}
@@ -123,9 +127,13 @@ const Skills = () => {
                       p: 4,
                       height: '100%',
                       borderRadius: 4,
-                      background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)',
+                      background: (theme) => theme.palette.mode === 'dark' 
+                        ? 'rgba(255, 255, 255, 0.05)' 
+                        : 'rgba(0, 0, 0, 0.02)',
                       border: '1px solid',
-                      borderColor: 'rgba(102, 126, 234, 0.1)',
+                      borderColor: (theme) => theme.palette.mode === 'dark' 
+                        ? 'rgba(255, 255, 255, 0.1)' 
+                        : 'rgba(0, 0, 0, 0.1)',
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         transform: 'translateY(-8px)',

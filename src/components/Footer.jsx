@@ -10,8 +10,14 @@ const Footer = () => {
       component="footer"
       sx={{
         py: 4,
-        background: '#1a202c',
+        background: '#1a1a1a',
+        backgroundImage: `
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
         color: 'rgba(255, 255, 255, 0.8)',
+        position: 'relative',
       }}
     >
       <Container maxWidth="lg">
@@ -44,7 +50,7 @@ const Footer = () => {
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
                   '&:hover': {
-                    color: '#667eea',
+                    color: '#ffffff',
                   },
                   transition: 'color 0.3s ease',
                 }}
@@ -57,7 +63,7 @@ const Footer = () => {
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
                   '&:hover': {
-                    color: '#667eea',
+                    color: '#ffffff',
                   },
                   transition: 'color 0.3s ease',
                 }}
@@ -70,7 +76,7 @@ const Footer = () => {
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
                   '&:hover': {
-                    color: '#667eea',
+                    color: '#ffffff',
                   },
                   transition: 'color 0.3s ease',
                 }}
@@ -83,7 +89,7 @@ const Footer = () => {
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
                   '&:hover': {
-                    color: '#667eea',
+                    color: '#ffffff',
                   },
                   transition: 'color 0.3s ease',
                 }}

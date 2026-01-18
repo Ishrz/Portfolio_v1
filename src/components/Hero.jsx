@@ -84,7 +84,12 @@ const Hero = () => {
         alignItems: 'center',
         position: 'relative',
         overflow: 'hidden',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: '#1a1a1a',
+        backgroundImage: `
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
         '&::before': {
           content: '""',
           position: 'absolute',
@@ -92,7 +97,7 @@ const Hero = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)',
+          background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%)',
         },
         '&::after': {
           content: '""',
@@ -101,7 +106,7 @@ const Hero = () => {
           right: '-50%',
           width: '100%',
           height: '200%',
-          background: 'radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)',
           animation: 'float 20s ease-in-out infinite',
         },
         '@keyframes float': {
@@ -147,7 +152,7 @@ const Hero = () => {
                     animation: 'pulse 2s infinite',
                   }} 
                 />
-                <Typography variant="body2" sx={{ color: 'white', fontWeight: 500 }}>
+                <Typography variant="body2" sx={{ color: 'white', fontWeight: 500, fontSize: '0.95rem' }}>
                   Currently working on: Portfolio v2.0
                 </Typography>
               </Box>
@@ -157,7 +162,7 @@ const Hero = () => {
               <Typography
                 variant="h1"
                 sx={{
-                  fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem', lg: '5.5rem' },
+                  fontSize: { xs: '3.5rem', sm: '4.5rem', md: '5.5rem', lg: '6.5rem' },
                   fontWeight: 800,
                   color: 'white',
                   mb: 2,
@@ -186,7 +191,7 @@ const Hero = () => {
               <Typography
                 variant="h4"
                 sx={{
-                  fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+                  fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
                   color: 'rgba(255, 255, 255, 0.95)',
                   fontWeight: 600,
                   minHeight: '3rem',
@@ -228,7 +233,7 @@ const Hero = () => {
               <Typography
                 variant="h5"
                 sx={{
-                  fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
+                  fontSize: { xs: '1.4rem', sm: '1.6rem', md: '1.8rem' },
                   color: 'rgba(255, 255, 255, 0.9)',
                   maxWidth: '700px',
                   fontWeight: 300,
@@ -250,11 +255,11 @@ const Hero = () => {
                     sx={{
                       px: 4,
                       py: 1.5,
-                      fontSize: '1rem',
+                      fontSize: '1.2rem',
                       fontWeight: 600,
                       borderRadius: '50px',
                       background: 'white',
-                      color: '#667eea',
+                      color: '#1a1a1a',
                       textTransform: 'none',
                       boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
                       '&:hover': {
@@ -275,7 +280,7 @@ const Hero = () => {
                     sx={{
                       px: 4,
                       py: 1.5,
-                      fontSize: '1rem',
+                      fontSize: '1.2rem',
                       fontWeight: 600,
                       borderRadius: '50px',
                       borderColor: 'white',

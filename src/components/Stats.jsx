@@ -48,7 +48,14 @@ const Stats = () => {
       component="section"
       sx={{
         py: { xs: 6, md: 8 },
-        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)',
+        background: (theme) => theme.palette.mode === 'dark' ? '#1a1a1a' : '#ffffff',
+        backgroundImage: (theme) => theme.palette.mode === 'dark' 
+          ? `
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+          `
+          : 'none',
+        backgroundSize: '40px 40px',
       }}
     >
       <Container maxWidth="lg">

@@ -71,7 +71,12 @@ const Contact = () => {
       id="contact"
       sx={{
         py: { xs: 8, md: 12 },
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: '#1a1a1a',
+        backgroundImage: `
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
         position: 'relative',
         overflow: 'hidden',
         '&::before': {
@@ -81,7 +86,7 @@ const Contact = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%)',
+          background: 'radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%)',
         },
       }}
     >
@@ -201,10 +206,11 @@ const Contact = () => {
                             borderRadius: '50px',
                             textTransform: 'none',
                             fontWeight: 600,
-                            fontSize: '1rem',
-                            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                            fontSize: '1.2rem',
+                            background: 'white',
+                            color: '#1a1a1a',
                             '&:hover': {
-                              background: 'linear-gradient(135deg, #5568d3 0%, #653a8f 100%)',
+                              background: '#f5f5f5',
                             },
                           }}
                         >
