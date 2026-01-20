@@ -79,6 +79,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.1)' : 'none',
           transition: 'all 0.3s ease',
           marginBottom:'10px',
+
         }}
       >
         <Container maxWidth="lg">
@@ -98,7 +99,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     ? (darkMode ? '#ffffff' : '#1a1a1a')
                     : 'white',
                   cursor: 'pointer',
-                  mr: 4,
+                  mr: 10,
                 }}
               >
                 <i>Shaykh</i>
