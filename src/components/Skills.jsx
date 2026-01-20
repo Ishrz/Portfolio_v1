@@ -45,19 +45,20 @@ const Skills = () => {
       title: 'Frontend',
       icon: <CodeIcon sx={{ fontSize: 40 }} />,
       skills: skills.frontend,
-      color: '#667eea',
+      color: '#A179E3',
     },
     {
       title: 'Tools & Technologies',
       icon: <BuildIcon sx={{ fontSize: 40 }} />,
       skills: skills.tools,
-      color: '#764ba2',
+      color: '#D36FE1',
+      border:'1px solid black',
     },
     {
       title: 'Design',
       icon: <DesignServicesIcon sx={{ fontSize: 40 }} />,
       skills: skills.design,
-      color: '#f093fb',
+      color: '#64C9DC',
     },
   ];
 
